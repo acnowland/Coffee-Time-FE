@@ -13,11 +13,13 @@ newUserForm.addEventListener('submit', (event) => {
     const password = formData.get('password')
     const mod = formData.get('mod')
     const fullName = formData.get('fullName')
+    const prefTime = formData.get('timeAvailable')
     const slackLink = formData.get('slackLink')
     const newUser = {
         username: userName,
         password: password,
         fullName: fullName,
+        time: prefTime,
         mod: mod,
         slackLink: slackLink
     }

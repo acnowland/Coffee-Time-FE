@@ -58,6 +58,11 @@ h4{
     text-shadow: 5px 5px #FBF0D4,
                  6px 6px #C7B99C;
 }
+.welcome-user{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: -25px;
+}
 
 .cont-descriptors{
     display: flex;
@@ -77,10 +82,16 @@ h4{
     align-items: center;
     flex-direction: column;
     width: 300px;
-    height: 100%;
+    height: 80vh;
     margin-left: 30px;
     border-right: 1px solid #FBF0D4;
     border-right-style: double;
+    border-bottom: 1px solid #FBF0D4;
+    border-bottom-style: double;
+    overflow-y: scroll;
+}
+.side-bar::-webkit-scrollbar{
+    display: none;
 }
 .coffee-break{
     padding: 10px;
@@ -119,6 +130,8 @@ h4{
     flex-wrap: wrap;
     justify-content: space-evenly;
     width: 70%;
+    height: 80vh;
+    overflow-y: scroll;
 }
 #friend-card{
     display: flex;
@@ -149,4 +162,15 @@ h4{
     justify-content: space-evenly;
     align-items: center;
     
+}
+.general-button{
+    border: 3px solid #FBF0D4;
+    background-color: white;
+    border-radius: 25px;
+    padding: 5px;
+    font-size: 16px;
+}
+.general-button:hover{
+    background-color: #FBF0D4;
+    font-style: italic;
 }

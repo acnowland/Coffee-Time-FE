@@ -1,10 +1,11 @@
-console.log('ahmed')
+
 
 const logout = document.querySelector('.logout')
 const token = localStorage.getItem('token')
 const friendContainer = document.querySelector('.card-container')
 const breakContainer = document.querySelector('.side-bar')
-console.log(breakContainer)
+const welcome = document.querySelector('.welcome-user')
+
 
 logout.addEventListener('click', (event) => {
     localStorage.clear()
@@ -20,6 +21,7 @@ fetch('http://localhost:3000/profile.html', {
 
 
 function handleUser(user){
+    welcome.textContent=(`Welcome ${user.user.fullName}!!`)
     let friends = user.users
     let breaks = user.user.breaks
     handleFriends(friends,user)
@@ -57,6 +59,7 @@ function handleFriends(friends,user){
 }
 
 function friendCard(friend,user){
+    console.log(friend)
 
     
 
@@ -85,19 +88,21 @@ function friendCard(friend,user){
     const friendAndTime = document.createElement('div')
     friendAndTime.className = 'friend-time'
     const timeAvailable = document.createElement('h4')
-    timeAvailable.textContent = "Time Available:"
+    timeAvailable.textContent = `Time Available:`
     const time = document.createElement('h4')
-    time.textContent = "need to add time"
+    time.textContent = friend.time
 
     const reserveArea = document.createElement('div')
     reserveArea.className = 'reserve'
 
     const reserveButton = document.createElement('button')
     reserveButton.textContent = "Reserve Time"
+    reserveButton.className = 'general-button'
     reserveButton.addEventListener('click', createBreak)
 
     friendAndTime.append(timeAvailable,time)
     reserveArea.append(reserveButton)
+    
     bottomFriend.append(friendAndTime,reserveArea)
 
 
@@ -105,14 +110,14 @@ function friendCard(friend,user){
     friendContainer.append(friendCard)
 
     function createBreak(){
-        console.log(friend)
+
         const currentUser = user.user.id
         const newFriend = friend.id
         const newBreak = {
             user_1_id: currentUser,
             user_2_id: newFriend
         }
-        createBreakCard(friend)
+
         fetch('http://localhost:3000/coffee_breaks',{
             method: 'POST',
             headers:{
@@ -121,6 +126,8 @@ function friendCard(friend,user){
             },
             body: JSON.stringify(newBreak)
         })
+        .then(response => response.json())
+        .then(createBreakCard(friend))
 
     }
 
