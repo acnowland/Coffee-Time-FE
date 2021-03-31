@@ -32,7 +32,7 @@ a{
     align-content: center;
     align-items: center;
     justify-content: center;
-    border: 1px solid #FBF0D4;
+    border: 1px solid #cba690;
 }
 a:visited{
     color: black
@@ -53,21 +53,49 @@ a:visited{
 #signup-card{
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     align-content: center;
     align-items: center;
-    width: 400px;
-    height: 400px;
+    width: 50%;
+    height: 90%;
     border: 5px solid #FBF0D4;
     margin-top: 100px;
     border-radius: 25px;
+    overflow: auto;
 }
 #signup-card form{
     display: flex;
     flex-direction: column;
-
 }
 #signup-card form input{
-    padding: 10px;
-    margin: 10px;
+    padding: 15px;
+    margin: 15px;
 }
+.tooltip {
+    display: inline-flex;
+    justify-content: center;
+    font-style: italic;
+    border-bottom: 1px dotted #FBF0D4;
+  }
+  
+  .tooltip-text {
+    visibility: hidden;
+    width: 400px;
+    
+    background-color: #FBF0D4;
+    color: black;
+    text-align: center;
+    border-radius: 25px;
+    padding: 5px;
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .tooltip:hover .tooltip-text {
+    visibility: visible;
+    console.log('hovered')
+  }
+

@@ -1,8 +1,8 @@
-console.log('ahmed')
+
 
 const loginForm = document.querySelector('#login-form')
 const signUp = document.querySelector('.sign-up')
-console.log(signUp)
+
 const baseURL = 'http://localhost:3000/'
 
 

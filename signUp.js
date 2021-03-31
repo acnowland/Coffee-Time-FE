@@ -11,9 +11,15 @@ newUserForm.addEventListener('submit', (event) => {
     const formData = new FormData(event.target)
     const userName = formData.get('username')
     const password = formData.get('password')
+    const mod = formData.get('mod')
+    const fullName = formData.get('fullName')
+    const slackLink = formData.get('slackLink')
     const newUser = {
         username: userName,
-        password: password
+        password: password,
+        fullName: fullName,
+        mod: mod,
+        slackLink: slackLink
     }
 
     fetch('http://localhost:3000/users', {

@@ -24,8 +24,18 @@
         </div>
         <div id='signup-card'>
             <form>
-                <input type="text" name = "username" placeholder="Desired Username">
-                <input type="text" name = "password" placeholder="Desired Password">
+                <div class='left-signup'>
+                    <input type="text" name = "username" placeholder="Desired Username">
+                    <input type="text" name = "password" placeholder="Desired Password">
+                    <input type="text" name = "mod" placeholder="Current Mod (ex: 3)">
+                </div>
+
+                <input type="text" name = "fullName" placeholder="Your Full Name">
+                <input type="text" name = "slackLink" placeholder="Your Slack Link">
+                <div class = 'tooltip'>
+                    Slack Link?
+                    <span class='tooltip-text'>To get your Slack Link you will right click your OWN name in your slack DM's and copy Link.</span>
+                </div>
                 <input type="submit">
             </form>
         </div>

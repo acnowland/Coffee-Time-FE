@@ -20,6 +20,17 @@ body{
     max-height: 125px;
     background-color: #FEFEFE;
 }
+.break-slack{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    font-style: italic;
+    border-top: 2px solid #FBF0D4 ;
+}
+.break-slack:visited{
+    color: black;
+}
+
 h4{
     display: flex;
     justify-content: center;
@@ -27,7 +38,7 @@ h4{
     font-size: 25px;
 }
 
-a{
+.logout{
     display: flex;
     text-decoration: none;
     font-size: 18px;
@@ -36,7 +47,9 @@ a{
     align-items: center;
     justify-content: center;
     border: 1px solid #FBF0D4;
-
+}
+.logout:visited{
+    color: black;
 }
 
 .title{
@@ -64,9 +77,9 @@ a{
     align-items: center;
     flex-direction: column;
     width: 300px;
-    height: 600px;
+    height: 100%;
     margin-left: 30px;
-    border-right: 4px solid #FBF0D4 ;
+    border-right: 1px solid #FBF0D4;
     border-right-style: double;
 }
 .coffee-break{
@@ -75,7 +88,7 @@ a{
     font-size: 22px;
     border: 3px solid #FBF0D4;
     border-radius: 25px;
-    margin: 50px 50px 50px 100px;
+    margin: 50px 50px 50px 112px;
 }
 .friends-meet{
     display: flex;
@@ -86,7 +99,7 @@ a{
     border: 3px solid #FBF0D4;
     border-radius: 25px;
     margin: 50px 100px 50px 50px;
-    width: 55%;
+    width: 60%;
 }
 .break-card{
     display: flex;
@@ -95,6 +108,7 @@ a{
     border: 2px solid #C6B89B;
     border-radius: 25px;
     margin-right: 40px;
+    margin-bottom: 15px;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
@@ -103,18 +117,36 @@ a{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 70%;
 }
 #friend-card{
     display: flex;
-    width: 25%;
-    height: 50%;
-    border: 2px solid #C6B89B;
-    border-radius: 25px;
-    margin-right: 40px;
     flex-direction: column;
+    border: 2px solid #C6B89B;
+    width: 400px;
+    height: 300px;
+    border-radius: 25px;
+    margin-bottom: 15px;
+    
+}
+#friend-card .top-friend-card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 5px;
+}
+#friend-card .name-mod{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    align-content: center;
+    width: 65%;
+}
+#friend-card .bottom-friend-card{
+    display: flex;
+    flex-direction: row;
     justify-content: space-evenly;
+    align-items: center;
+    
 }
