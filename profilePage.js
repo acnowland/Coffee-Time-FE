@@ -90,9 +90,7 @@ function handleFriends(friends,user){
 }
 
 function friendCard(friend,user){
-    console.log(friend)
-    console.log(user.user)
-    console.log(friend.id == user.user.id)
+
 
     if(friend.id !== user.user.id){
         //creating friend card
@@ -121,6 +119,7 @@ function friendCard(friend,user){
         const timeAvailable = document.createElement('h4')
         timeAvailable.textContent = `Time Available:`
         const time = document.createElement('h4')
+        time.className = 'bottom-time'
         time.textContent = friend.time
 
         const reserveArea = document.createElement('div')
@@ -159,9 +158,14 @@ function friendCard(friend,user){
             },
             body: JSON.stringify(newBreak)
         })
-        .then(response => response.json())
-        .then(createBreakCard(friend,currentUser))
+        .then(response => {
+            if(response.ok == false){
 
+                swal('Break Already Set!', 'Please try connecting with someone new 😊', "warning")
+            }else{
+                (createBreakCard(friend,currentUser))
+            }
+        })
     }
 
 

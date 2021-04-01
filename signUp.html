@@ -32,7 +32,17 @@
 
 
                 <input type="text" name = "fullName" placeholder="Your Full Name">
-                <input type="text" name = "timeAvailable" placeholder="Preferred Meeting Time (Morning, Afternoon, Lunch)">
+                <h3 class = 'time-signup'>Time Available:</h3>
+                <div class = 'radio-buttons'>
+                    <input type="radio" name = "timeAvailable" value = 'Morning'>
+                    <label for="Morning">Morning</label>
+                    <input type="radio" name = "timeAvailable" value = 'Afternoon'>
+                    <label for="Afternoon">Afternoon</label>
+                    <input type="radio" name = "timeAvailable" value = 'Evening'>
+                    <label for="Evening">Evening</label>
+                </div>
+
+                <!-- <input type="text" name = "timeAvailable" placeholder="Preferred Meeting Time (Morning, Afternoon, Evening)"> -->
                 <input type="text" name = "slackLink" placeholder="Your Slack Link">
                 <div class = 'tooltip'>
                     Slack Link?
