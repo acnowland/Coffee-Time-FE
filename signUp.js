@@ -2,7 +2,7 @@
 
 
 const newUserForm = document.querySelector('form')
-console.log(newUserForm)
+
 
 
 newUserForm.addEventListener('submit', (event) => {

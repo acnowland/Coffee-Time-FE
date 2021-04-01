@@ -38,18 +38,27 @@ h4{
     font-size: 25px;
 }
 
-.logout{
+
+.logout-area{
     display: flex;
-    text-decoration: none;
-    font-size: 18px;
-    font-style: italic;
-    align-content: center;
+    justify-content: space-around;
     align-items: center;
-    justify-content: center;
-    border: 1px solid #FBF0D4;
+    align-content: center;
+    border: 2px solid #FBF0D4;
 }
-.logout:visited{
+.logout{
+    border: 2px solid #C6B79B;
+    padding: 5px;
+    margin: 2px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 1.2rem;
     color: black;
+}
+.logout:hover{
+    background-color: #FBEFD4;
+    transition: .3s;
+    border: 2px solid #FBF0D4;
 }
 
 .title{
@@ -115,6 +124,7 @@ h4{
 .break-card{
     display: flex;
     width: 200px;
+    color: black;
     max-height: 250px;
     border: 2px solid #C6B89B;
     border-radius: 25px;
@@ -123,6 +133,7 @@ h4{
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 .card-container{
     display: flex;
@@ -132,6 +143,18 @@ h4{
     width: 70%;
     height: 80vh;
     overflow-y: scroll;
+    border-radius: 25px;
+    padding: 15px;
+    
+}
+.card-container:hover{
+    transition: 2s;
+    background-color: rgb(253, 253, 253);
+    /* box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px; */
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+}
+.card-container::-webkit-scrollbar{
+    color: blanchedalmond;
 }
 #friend-card{
     display: flex;
@@ -141,6 +164,8 @@ h4{
     height: 300px;
     border-radius: 25px;
     margin-bottom: 15px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
     
 }
 #friend-card .top-friend-card{
@@ -163,6 +188,11 @@ h4{
     align-items: center;
     
 }
+.bottom-time{
+    color: #AB7367;
+    margin-top: -15px;
+    font-size: 2rem;
+}
 .general-button{
     border: 3px solid #FBF0D4;
     background-color: white;
@@ -173,7 +203,11 @@ h4{
 }
 .general-button:hover{
     background-color: #FBF0D4;
+    border: 2px solid #C6B79B;
     font-style: italic;
     cursor: pointer;
+    transition: .3s;
     
 }
+
+
