@@ -6,13 +6,25 @@ const friendContainer = document.querySelector('.card-container')
 const breakContainer = document.querySelector('.side-bar')
 const welcome = document.querySelector('.welcome-user')
 
+//modal stuff
+const modal = document.querySelector('#edit-modal')
+const openModal = document.querySelector('.mod-button')
+const closeModal = document.querySelector('.close-button')
+const modalForm = document.querySelector('.modal-form')
+const modalUser = document.querySelector('.modal-username')
+console.log(modalForm)
 
+
+
+
+
+//clears local storage on logout
 logout.addEventListener('click', (event) => {
     localStorage.clear()
 })
 
-// window.addEventListener("beforeunload", () => localStorage.clear())
-
+//initial fetch that will handle the user
+//handling user entails creating all cards on page and creating break cards
 fetch('http://localhost:3000/profile.html', {
     headers:{
         Authorization: `Bearer ${token}`
@@ -21,7 +33,8 @@ fetch('http://localhost:3000/profile.html', {
     .then(response => response.json())
     .then(handleUser)
 
-
+//displays login name, sets intial variables to pass down
+//will call handleFriends and handleBreaks
 function handleUser(user){
     welcome.textContent=(`Welcome ${user.user.fullName}!!`)
     let friends = user.users
@@ -31,14 +44,53 @@ function handleUser(user){
 
     handleFriends(friends,user)
     handleBreaks(breaks,userID)
+    handleModal(user.user)
 }
 
+function handleModal(user){
+    openModal.addEventListener('click', openModalDisplay)
+    closeModal.addEventListener('click', closeModalDisplay)
+    window.addEventListener('click', clickOutside)
+    modalUser.textContent = user.fullName
+    modalForm.addEventListener('submit', (event => {
+        event.preventDefault();
+        
+        const formData = new FormData(event.target)
+        console.log(formData)
+        const newMod = formData.get('mod')
+        const newTime = formData.get('timeAvailable')
+        console.log(newMod,newTime)
+
+        
+    }))
+    
+
+    function openModalDisplay(){
+        modal.style.display = 'block';
+    }
+    function closeModalDisplay(){
+        modal.style.display = 'none';
+    }
+    function clickOutside(e){
+        if(e.target ==  modal){
+            modal.style.display = 'none'
+        }
+    }
+
+}
+
+
+
+
+//will go over each break and pass to create the break card
 function handleBreaks(breaks,userID){
     breaks.forEach(coffeeBreak => {
         createBreakCard(coffeeBreak,userID)
     })
 }
 
+//creates each break card by putting it into the sidebar
+//also handles the deletion of a card with on click listener
 function createBreakCard(coffeeBreak,userID){
     
     const breakCard = document.createElement('div')
@@ -79,9 +131,7 @@ function createBreakCard(coffeeBreak,userID){
 
 }
 
-
-
-
+//will go over each friend and pass to friend card to creat care
 function handleFriends(friends,user){
 
     friends.forEach(friend=>{
@@ -89,6 +139,8 @@ function handleFriends(friends,user){
     })
 }
 
+//creates each friend card on the page
+//also handles the creation of new coffee breaks
 function friendCard(friend,user){
 
 
