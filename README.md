@@ -33,7 +33,7 @@ This is the current version of the front end for my project called CoffeeTime. C
 
 **Use**
 
-(Will add video soon)
+Here check out this video first! (https://www.youtube.com/watch?v=5AMM0J8EofY)
 
 Using this web app is very straightforward and will function like most social medial websites you use; just on a much smaller scale. You will first want to create a user/users. This will ask you some questions and once submitted you can then proceed to  your login. Once you login, you will be able to see all other users on the platform so far. You can see their mod and their time they prefer to meet for coffee. A request button is shown on the cards and upon clicking it a coffee freindship will form; represented via a card on the left hand side. Once clicked, it also makes a coffee break for the other user as well. As long as they put in their slack link correctly, you can click on that link and proceed to set up a time to meet for coffee! Once you have finished, just click the finish button and it will remove the break for both users! Meeting people has never been so simple! 
 
