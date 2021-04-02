@@ -57,3 +57,40 @@ h4{
     display: flex;
     justify-content: space-around;
 }
+.login-button{
+    font-family: 'Dancing Script', cursive;
+    border: 2px solid #C6B79B;
+    background-color: white;
+    padding: 5px;
+    margin: 2px;
+    border-radius: 25px;
+    text-decoration: none;
+    /* font-size: 1.3rem; */
+    color: black;
+    font-size: 17px;
+}
+.login-button:hover{
+    cursor: pointer;
+    background-color: #FBEFD4;
+    transition: .3s;
+    border: 2px solid #FBF0D4;
+}
+.sign-up{
+    font-family: 'Dancing Script', cursive;
+    border: 2px solid #C6B79B;
+    background-color: white;
+    padding: 5px;
+    margin: 2px;
+    border-radius: 25px;
+    text-decoration: none;
+    /* font-size: 1.3rem; */
+    color: black;
+    font-size: 17px;
+}
+.sign-up:hover{
+    cursor: pointer;
+    background-color: #FBEFD4;
+    transition: .3s;
+    border: 2px solid #FBF0D4;
+}
+

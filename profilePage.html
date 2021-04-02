@@ -22,7 +22,31 @@
         <h4>Your source for meeting coworkers....digitally</h4>
 
         <div class='logout-area'>
-            <a class = 'logout'href="#">Edit Profile</a>
+            <button id='modal-button' class="mod-button">Edit Profile</button>
+            <div id='edit-modal', class='modal'>
+                <div class="modal-content">
+                    <span class="close-button">&times;</span>
+                    <h1 class = 'modal-username'>Username</h1>
+                    <div class='edit-container'>
+                        <form class = 'modal-form'>
+                            <h3>MOD:</h3>
+                            <input type="number" name = "mod" placeholder="Change Current Mod">
+                            <h3>Change preferred time:</h3>
+                            <div class = 'radio-buttons'>
+                                <input type="radio" name = "timeAvailable" value = 'Morning'>
+                                <label for="Morning">Morning</label>
+                                <input type="radio" name = "timeAvailable" value = 'Afternoon'>
+                                <label for="Afternoon">Afternoon</label>
+                                <input type="radio" name = "timeAvailable" value = 'Evening'>
+                                <label for="Evening">Evening</label>
+                            </div>
+                            <input class = 'mod-submit' type="submit">
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+ 
             <a class = 'logout' href="./index.html">Logout</a>
         </div>
     </div>

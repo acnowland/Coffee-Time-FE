@@ -104,4 +104,22 @@ a:visited{
     visibility: visible;
     console.log('hovered')
   }
+  .signup-submit{
+    font-family: 'Dancing Script', cursive;
+    border: 2px solid #C6B79B;
+    background-color: white;
+    padding: 5px;
+    margin: 2px;
+    border-radius: 25px;
+    text-decoration: none;
+    /* font-size: 1.3rem; */
+    color: black;
+    font-size: 17px;
+}
+.signup-submit:hover{
+    cursor: pointer;
+    background-color: #FBEFD4;
+    transition: .3s;
+    border: 2px solid #FBF0D4;
+}
 
